@@ -1,0 +1,11 @@
+.galeria {
+    width: 33%;
+}
+.galeria img { 
+    object-fit: cover;
+    width:100%;
+    height:auto;
+  }
+.centrar-icono {
+    text-align: center;
+}

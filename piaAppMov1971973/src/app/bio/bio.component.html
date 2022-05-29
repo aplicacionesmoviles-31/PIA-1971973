@@ -1,0 +1,67 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size-md="10" offset-md="1">
+            <ion-grid id="about">
+    
+                <ion-row>
+                    <ion-col size="3" class="centrar">
+                        <ion-avatar>
+                            <ion-img src="{{usuario.fotoPerfil}}" ></ion-img>
+                        </ion-avatar>
+                    </ion-col>
+                    <ion-col size="3" class="centrar">
+                        <span class="strong">{{usuario.pub}}</span>
+                        <span>Publicaciones</span>
+                    </ion-col>
+                    <ion-col size="3" class="centrar">
+                        <span class="strong">{{usuario.seguidores}}</span>
+                        <span>Seguidores</span>
+                    </ion-col>
+                    <ion-col size="3" class="centrar">
+                        <span class="strong">{{usuario.seguidos}}</span>
+                        <span>Seguidos</span>
+                    </ion-col>
+                </ion-row>
+                
+                    <!--<ion-col>
+                        <span class="strong">{{usuario.nombre}}</span>
+                        <ion-text color="medium" class="ion-margin-start info">Artista</ion-text>
+                        <span >{{usuario.bio}}</span>
+                    </ion-col>
+                -->
+                <ion-row class="marginTop">
+                    <ion-col>
+                        <span class="strong">{{usuario.nombre}}</span>
+                      <ion-label>
+                        <ion-text color="medium">Artista</ion-text>
+                        <ion-row>
+                          <ion-text class="ion-text-justify description">
+                            Holaaaa soy un artista que intenta crecer en este mundillo
+                          </ion-text>
+                          <a href="https://linktr.ee/zFlayn">linktr.ee/zFlayn</a>
+                        </ion-row>
+                      </ion-label>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size="4">
+                        <ion-button color="dark" (click)="seguir()" fill="outline">
+                            <span *ngIf="!siguiendo">Seguir</span>
+                            <span *ngIf="siguiendo">Dejar de Seguir</span>
+                        </ion-button>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-button color="dark" class="secundario" (click)="enviarMensaje()" fill="outline">Mensaje</ion-button>
+                    </ion-col>
+                    <ion-col size="2">
+                        <ion-button color="dark" class="secundario" (click)="enviarEmail()" fill="outline">Email</ion-button>
+                    </ion-col>
+                    <ion-col size="1">
+                        <ion-button color="danger" class="secundario" (click)="createActionSheet()" fill="outline"><ion-icon name="caret-down-outline"></ion-icon></ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-col>
+    </ion-row>
+</ion-grid>
